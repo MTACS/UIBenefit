@@ -57,7 +57,7 @@ class PythonOrgSearch(unittest.TestCase):
         driver.find_element_by_id("ctl00_ctl00_cphMain_cphMain_cbAcknowledgement").click()
         WebDriverWait(driver,20).until(EC.element_to_be_clickable((By.XPATH,'//input[@alt="Submit"]'))).click()
         time.sleep(5)
-        print("Person requested beenfits")
+        print("Person requested benefits")
         assert "No results found. " not in driver.page_source
     
     def tearDown(self):
